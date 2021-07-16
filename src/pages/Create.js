@@ -1,22 +1,36 @@
 import React from 'react'
+import Button from '@material-ui/core/Button'
+import ButtonGroup from '@material-ui/core/ButtonGroup'
 import Typography from '@material-ui/core/Typography'
+import Container from '@material-ui/core/Container'
+import SendIcon from '@material-ui/icons/Send'
+import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight'
 
 export default function Create() {
   return (
-    <div>
-      {/* <Typography
-        variant="h1"
-        color="primary"
-      >
-        Create a new note
-      </Typography> */}
-
+    <Container>
       <Typography
-        color="secondary"
-        noWrap
+        variant="h6"
+        color="textSecondary"
+        component="h2"
+        gutterBottom
       >
-        Lorem ipsum etc Lorem ipsum etc Lorem ipsum etc Lorem ipsum etc Lorem ipsum etc
+        Create a New Note
       </Typography>
-    </div>
+
+      <Button
+        onClick={() => console.log('you clicked me!')}
+        type="submit"
+        color="secondary"
+        variant="contained"
+        endIcon={<KeyboardArrowRightIcon />}
+      >
+        Submit
+      </Button>
+
+
+
+    
+    </Container>
   )
 }

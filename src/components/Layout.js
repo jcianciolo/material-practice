@@ -1,6 +1,6 @@
 import { 
     Drawer, makeStyles, Typography, 
-    List, ListItem, ListItemIcon, ListItemText, AppBar, Toolbar
+    List, ListItem, ListItemIcon, ListItemText, AppBar, Toolbar, Avatar
     } from '@material-ui/core'
 import { AddCircleOutlineOutlined, SubjectOutlined } from '@material-ui/icons'
 import React from 'react'
@@ -37,6 +37,9 @@ const useStyles = makeStyles((theme) => {
         toolbar: theme.mixins.toolbar,
         date: {
             flexGrow: 1
+        },
+        avatar: {
+            marginLeft: theme.spacing(2)
         }
     }
 })
@@ -72,6 +75,7 @@ const Layout = ({ children }) => {
                     <Typography>
                         John
                     </Typography>
+                    <Avatar src="/fool.jpg" className={classes.avatar} />
                 </Toolbar>
             </AppBar>
 
